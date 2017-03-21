@@ -36,6 +36,15 @@ namespace Stream_Helper
             streamURLbox.Visible = false;
             label8.Visible = false;
 
+            label9.Visible = false;
+            label10.Visible = false;
+            vHorizRes.Visible = false;
+            vVertRes.Visible = false;
+            label9.Enabled = false;
+            label10.Enabled = false;
+            vHorizRes.Enabled = false;
+            vVertRes.Enabled = false;
+
             // get ip
             //string ip = "";
             string strHostName = "";
@@ -51,8 +60,7 @@ namespace Stream_Helper
             }
             ipCombo.SelectedIndex = ipCombo.Items.Count - 1;
 
-            // find vlc/exe
-            // fixme: need to add windows 10 file paths
+            // find vlc.exe
             // also need to test dropping this app in vlc folder while other paths are broken
             if (File.Exists(@"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"))
             {
@@ -160,14 +168,14 @@ namespace Stream_Helper
             streamVvertResolution = vVertRes.Text;
             finalFilePath = ("file:///" + (filePath.Replace(@"\", @"/").Replace(@" ", @"%20")));
 
-            if (streamVhorizResolution == "Auto")
-            {
-                streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
-            }
-            else
-            {
-                streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,width=" + streamVhorizResolution +",height=" + streamVvertResolution + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
-            }
+            //if (streamVhorizResolution == "Auto")
+            //{
+            streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
+            //}
+            //else
+            //{
+            //streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,width=" + streamVhorizResolution + ",height=" + streamVvertResolution + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
+            //}
 
             // populate the stream url and make it visible
             streamURLbox.Text = ("http://" + selectedIP + ":" + portBox.Text);
@@ -187,9 +195,9 @@ namespace Stream_Helper
         {
             filePathBox.Text = null;
             portBox.Value = decimal.Parse("8080");
-            vBitrateBox.Value = decimal.Parse("1000");
-            vHorizRes.Text = "Auto";
-            vVertRes.Text = "Auto";
+            vBitrateBox.Value = decimal.Parse("2500");
+            //vHorizRes.Text = "Auto";
+            //vVertRes.Text = "Auto";
             aBitrateBox.Value = decimal.Parse("128");
             aSampleRateCombo.SelectedItem = "44100";
             filePath = null;

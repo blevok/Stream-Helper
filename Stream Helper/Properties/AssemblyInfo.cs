@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Stream Helper")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Starts a video stream using existing VLC installation")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("blevok")]
 [assembly: AssemblyProduct("Stream Helper")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
