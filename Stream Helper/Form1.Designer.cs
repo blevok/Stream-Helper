@@ -28,55 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.appTitleLabel = new System.Windows.Forms.Label();
             this.filePathBox = new System.Windows.Forms.TextBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnStream = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.ipCombo = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ipLabel = new System.Windows.Forms.Label();
+            this.selectFileLabel = new System.Windows.Forms.Label();
+            this.portLabel = new System.Windows.Forms.Label();
             this.portBox = new System.Windows.Forms.NumericUpDown();
             this.vBitrateBox = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.vBitrateLabel = new System.Windows.Forms.Label();
+            this.aBitrateLabel = new System.Windows.Forms.Label();
             this.aBitrateBox = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
+            this.aSampleLabel = new System.Windows.Forms.Label();
             this.aSampleRateCombo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.streamUrlLabel = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.vHorizRes = new System.Windows.Forms.TextBox();
             this.vVertRes = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.vHorizResLabel = new System.Windows.Forms.Label();
+            this.vVertResLabel = new System.Windows.Forms.Label();
             this.streamURLbox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.vlcNotFoundLabel = new System.Windows.Forms.Label();
+            this.step1Label = new System.Windows.Forms.Label();
+            this.step2Label = new System.Windows.Forms.Label();
+            this.step3Label = new System.Windows.Forms.Label();
+            this.btnSourceFile = new System.Windows.Forms.Button();
+            this.vFramerateBox = new System.Windows.Forms.NumericUpDown();
+            this.vFramerateLabel = new System.Windows.Forms.Label();
+            this.btnSourceDesktop = new System.Windows.Forms.Button();
+            this.selectSourceLabel = new System.Windows.Forms.Label();
+            this.aspectSelectLabel = new System.Windows.Forms.Label();
+            this.aspect43Radio = new System.Windows.Forms.RadioButton();
+            this.aspect169Radio = new System.Windows.Forms.RadioButton();
+            this.picture169 = new System.Windows.Forms.PictureBox();
+            this.picture43 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vBitrateBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBitrateBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vFramerateBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture169)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture43)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // appTitleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stream Helper";
+            this.appTitleLabel.AutoSize = true;
+            this.appTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appTitleLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.appTitleLabel.Location = new System.Drawing.Point(13, 13);
+            this.appTitleLabel.Name = "appTitleLabel";
+            this.appTitleLabel.Size = new System.Drawing.Size(203, 36);
+            this.appTitleLabel.TabIndex = 1;
+            this.appTitleLabel.Text = "Stream Helper";
             // 
             // filePathBox
             // 
             this.filePathBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filePathBox.Location = new System.Drawing.Point(38, 103);
+            this.filePathBox.Location = new System.Drawing.Point(35, 105);
             this.filePathBox.Name = "filePathBox";
             this.filePathBox.Size = new System.Drawing.Size(469, 23);
             this.filePathBox.TabIndex = 2;
@@ -84,7 +97,7 @@
             // btnOpenFile
             // 
             this.btnOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenFile.Location = new System.Drawing.Point(513, 102);
+            this.btnOpenFile.Location = new System.Drawing.Point(510, 104);
             this.btnOpenFile.Name = "btnOpenFile";
             this.btnOpenFile.Size = new System.Drawing.Size(75, 25);
             this.btnOpenFile.TabIndex = 3;
@@ -95,7 +108,7 @@
             // btnStream
             // 
             this.btnStream.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStream.Location = new System.Drawing.Point(38, 294);
+            this.btnStream.Location = new System.Drawing.Point(35, 334);
             this.btnStream.Name = "btnStream";
             this.btnStream.Size = new System.Drawing.Size(100, 26);
             this.btnStream.TabIndex = 4;
@@ -118,7 +131,7 @@
             // 
             this.ipCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipCombo.FormattingEnabled = true;
-            this.ipCombo.Location = new System.Drawing.Point(38, 173);
+            this.ipCombo.Location = new System.Drawing.Point(35, 188);
             this.ipCombo.Name = "ipCombo";
             this.ipCombo.Size = new System.Drawing.Size(373, 24);
             this.ipCombo.TabIndex = 7;
@@ -128,43 +141,43 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // label2
+            // ipLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(35, 153);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Select the ip address of your primary network adapter";
+            this.ipLabel.AutoSize = true;
+            this.ipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ipLabel.ForeColor = System.Drawing.Color.Silver;
+            this.ipLabel.Location = new System.Drawing.Point(32, 168);
+            this.ipLabel.Name = "ipLabel";
+            this.ipLabel.Size = new System.Drawing.Size(346, 17);
+            this.ipLabel.TabIndex = 8;
+            this.ipLabel.Text = "Select the ip address of your primary network adapter";
             // 
-            // label3
+            // selectFileLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(35, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 17);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Select a video file to stream";
+            this.selectFileLabel.AutoSize = true;
+            this.selectFileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectFileLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.selectFileLabel.Location = new System.Drawing.Point(32, 85);
+            this.selectFileLabel.Name = "selectFileLabel";
+            this.selectFileLabel.Size = new System.Drawing.Size(182, 17);
+            this.selectFileLabel.TabIndex = 9;
+            this.selectFileLabel.Text = "Select a video file to stream";
             // 
-            // label4
+            // portLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(414, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Select a port";
+            this.portLabel.AutoSize = true;
+            this.portLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.portLabel.Location = new System.Drawing.Point(411, 168);
+            this.portLabel.Name = "portLabel";
+            this.portLabel.Size = new System.Drawing.Size(88, 17);
+            this.portLabel.TabIndex = 11;
+            this.portLabel.Text = "Select a port";
             // 
             // portBox
             // 
             this.portBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.portBox.Location = new System.Drawing.Point(417, 174);
+            this.portBox.Location = new System.Drawing.Point(414, 189);
             this.portBox.Maximum = new decimal(new int[] {
             49151,
             0,
@@ -192,7 +205,7 @@
             0,
             0,
             0});
-            this.vBitrateBox.Location = new System.Drawing.Point(38, 241);
+            this.vBitrateBox.Location = new System.Drawing.Point(35, 269);
             this.vBitrateBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -204,35 +217,35 @@
             0,
             0});
             this.vBitrateBox.Name = "vBitrateBox";
-            this.vBitrateBox.Size = new System.Drawing.Size(126, 23);
+            this.vBitrateBox.Size = new System.Drawing.Size(106, 23);
             this.vBitrateBox.TabIndex = 13;
             this.vBitrateBox.Value = new decimal(new int[] {
-            2500,
+            3000,
             0,
             0,
             0});
             // 
-            // label5
+            // vBitrateLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(35, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Video Bitrate (kb/s)";
+            this.vBitrateLabel.AutoSize = true;
+            this.vBitrateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vBitrateLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.vBitrateLabel.Location = new System.Drawing.Point(32, 249);
+            this.vBitrateLabel.Name = "vBitrateLabel";
+            this.vBitrateLabel.Size = new System.Drawing.Size(109, 15);
+            this.vBitrateLabel.TabIndex = 14;
+            this.vBitrateLabel.Text = "Video Bitrate (kb/s)";
             // 
-            // label6
+            // aBitrateLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(170, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Audio Bitrate (kb/s)";
+            this.aBitrateLabel.AutoSize = true;
+            this.aBitrateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aBitrateLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.aBitrateLabel.Location = new System.Drawing.Point(280, 249);
+            this.aBitrateLabel.Name = "aBitrateLabel";
+            this.aBitrateLabel.Size = new System.Drawing.Size(109, 15);
+            this.aBitrateLabel.TabIndex = 15;
+            this.aBitrateLabel.Text = "Audio Bitrate (kb/s)";
             // 
             // aBitrateBox
             // 
@@ -242,7 +255,7 @@
             0,
             0,
             0});
-            this.aBitrateBox.Location = new System.Drawing.Point(170, 241);
+            this.aBitrateBox.Location = new System.Drawing.Point(283, 269);
             this.aBitrateBox.Maximum = new decimal(new int[] {
             512,
             0,
@@ -254,7 +267,7 @@
             0,
             0});
             this.aBitrateBox.Name = "aBitrateBox";
-            this.aBitrateBox.Size = new System.Drawing.Size(129, 23);
+            this.aBitrateBox.Size = new System.Drawing.Size(106, 23);
             this.aBitrateBox.TabIndex = 16;
             this.aBitrateBox.Value = new decimal(new int[] {
             128,
@@ -262,16 +275,16 @@
             0,
             0});
             // 
-            // label7
+            // aSampleLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(302, 221);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 17);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Audio Sample Rate (Hz)";
+            this.aSampleLabel.AutoSize = true;
+            this.aSampleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSampleLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.aSampleLabel.Location = new System.Drawing.Point(392, 249);
+            this.aSampleLabel.Name = "aSampleLabel";
+            this.aSampleLabel.Size = new System.Drawing.Size(139, 15);
+            this.aSampleLabel.TabIndex = 17;
+            this.aSampleLabel.Text = "Audio Sample Rate (Hz)";
             // 
             // aSampleRateCombo
             // 
@@ -283,22 +296,22 @@
             "22050",
             "44100",
             "48000"});
-            this.aSampleRateCombo.Location = new System.Drawing.Point(305, 241);
+            this.aSampleRateCombo.Location = new System.Drawing.Point(395, 269);
             this.aSampleRateCombo.Name = "aSampleRateCombo";
-            this.aSampleRateCombo.Size = new System.Drawing.Size(157, 24);
+            this.aSampleRateCombo.Size = new System.Drawing.Size(136, 24);
             this.aSampleRateCombo.TabIndex = 18;
             this.aSampleRateCombo.Text = "44100";
             // 
-            // label8
+            // streamUrlLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.LightGray;
-            this.label8.Location = new System.Drawing.Point(35, 410);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(242, 17);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Open this URL in Stream Theater VR";
+            this.streamUrlLabel.AutoSize = true;
+            this.streamUrlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.streamUrlLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.streamUrlLabel.Location = new System.Drawing.Point(99, 398);
+            this.streamUrlLabel.Name = "streamUrlLabel";
+            this.streamUrlLabel.Size = new System.Drawing.Size(263, 20);
+            this.streamUrlLabel.TabIndex = 19;
+            this.streamUrlLabel.Text = "Open this URL in Home Theater VR";
             // 
             // btnReset
             // 
@@ -314,7 +327,7 @@
             // vHorizRes
             // 
             this.vHorizRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vHorizRes.Location = new System.Drawing.Point(173, 364);
+            this.vHorizRes.Location = new System.Drawing.Point(185, 343);
             this.vHorizRes.Name = "vHorizRes";
             this.vHorizRes.Size = new System.Drawing.Size(208, 23);
             this.vHorizRes.TabIndex = 21;
@@ -323,87 +336,210 @@
             // vVertRes
             // 
             this.vVertRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vVertRes.Location = new System.Drawing.Point(387, 364);
+            this.vVertRes.Location = new System.Drawing.Point(399, 343);
             this.vVertRes.Name = "vVertRes";
             this.vVertRes.Size = new System.Drawing.Size(191, 23);
             this.vVertRes.TabIndex = 22;
             this.vVertRes.Text = "Auto";
             // 
-            // label9
+            // vHorizResLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Location = new System.Drawing.Point(174, 344);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 17);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Video Horizontal Resolution (px)";
+            this.vHorizResLabel.AutoSize = true;
+            this.vHorizResLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vHorizResLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.vHorizResLabel.Location = new System.Drawing.Point(186, 323);
+            this.vHorizResLabel.Name = "vHorizResLabel";
+            this.vHorizResLabel.Size = new System.Drawing.Size(211, 17);
+            this.vHorizResLabel.TabIndex = 23;
+            this.vHorizResLabel.Text = "Video Horizontal Resolution (px)";
             // 
-            // label10
+            // vVertResLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightGray;
-            this.label10.Location = new System.Drawing.Point(384, 344);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(194, 17);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Video Vertical Resolution (px)";
+            this.vVertResLabel.AutoSize = true;
+            this.vVertResLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vVertResLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.vVertResLabel.Location = new System.Drawing.Point(396, 323);
+            this.vVertResLabel.Name = "vVertResLabel";
+            this.vVertResLabel.Size = new System.Drawing.Size(194, 17);
+            this.vVertResLabel.TabIndex = 24;
+            this.vVertResLabel.Text = "Video Vertical Resolution (px)";
             // 
             // streamURLbox
             // 
-            this.streamURLbox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.streamURLbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.streamURLbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.streamURLbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.streamURLbox.ForeColor = System.Drawing.Color.LightGray;
-            this.streamURLbox.Location = new System.Drawing.Point(38, 430);
+            this.streamURLbox.Location = new System.Drawing.Point(55, 421);
             this.streamURLbox.Name = "streamURLbox";
-            this.streamURLbox.Size = new System.Drawing.Size(239, 26);
+            this.streamURLbox.Size = new System.Drawing.Size(359, 32);
             this.streamURLbox.TabIndex = 26;
+            this.streamURLbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label11
+            // vlcNotFoundLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(22, 53);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 17);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Cannot find vlc.exe";
+            this.vlcNotFoundLabel.AutoSize = true;
+            this.vlcNotFoundLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vlcNotFoundLabel.ForeColor = System.Drawing.Color.Red;
+            this.vlcNotFoundLabel.Location = new System.Drawing.Point(22, 53);
+            this.vlcNotFoundLabel.Name = "vlcNotFoundLabel";
+            this.vlcNotFoundLabel.Size = new System.Drawing.Size(127, 17);
+            this.vlcNotFoundLabel.TabIndex = 28;
+            this.vlcNotFoundLabel.Text = "Cannot find vlc.exe";
             // 
-            // label12
+            // step1Label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Lime;
-            this.label12.Location = new System.Drawing.Point(12, 106);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(20, 17);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "1.";
+            this.step1Label.AutoSize = true;
+            this.step1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step1Label.ForeColor = System.Drawing.Color.Lime;
+            this.step1Label.Location = new System.Drawing.Point(9, 108);
+            this.step1Label.Name = "step1Label";
+            this.step1Label.Size = new System.Drawing.Size(20, 17);
+            this.step1Label.TabIndex = 29;
+            this.step1Label.Text = "1.";
             // 
-            // label13
+            // step2Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Lime;
-            this.label13.Location = new System.Drawing.Point(12, 176);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(20, 17);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "2.";
+            this.step2Label.AutoSize = true;
+            this.step2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step2Label.ForeColor = System.Drawing.Color.Lime;
+            this.step2Label.Location = new System.Drawing.Point(9, 191);
+            this.step2Label.Name = "step2Label";
+            this.step2Label.Size = new System.Drawing.Size(20, 17);
+            this.step2Label.TabIndex = 30;
+            this.step2Label.Text = "2.";
             // 
-            // label14
+            // step3Label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Lime;
-            this.label14.Location = new System.Drawing.Point(12, 299);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(20, 17);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "3.";
+            this.step3Label.AutoSize = true;
+            this.step3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step3Label.ForeColor = System.Drawing.Color.Lime;
+            this.step3Label.Location = new System.Drawing.Point(9, 339);
+            this.step3Label.Name = "step3Label";
+            this.step3Label.Size = new System.Drawing.Size(20, 17);
+            this.step3Label.TabIndex = 31;
+            this.step3Label.Text = "3.";
+            // 
+            // btnSourceFile
+            // 
+            this.btnSourceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSourceFile.Location = new System.Drawing.Point(126, 190);
+            this.btnSourceFile.Name = "btnSourceFile";
+            this.btnSourceFile.Size = new System.Drawing.Size(149, 24);
+            this.btnSourceFile.TabIndex = 32;
+            this.btnSourceFile.Text = "Video file";
+            this.btnSourceFile.UseVisualStyleBackColor = true;
+            this.btnSourceFile.Click += new System.EventHandler(this.btnSourceFile_Click);
+            // 
+            // vFramerateBox
+            // 
+            this.vFramerateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vFramerateBox.Location = new System.Drawing.Point(147, 269);
+            this.vFramerateBox.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.vFramerateBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.vFramerateBox.Name = "vFramerateBox";
+            this.vFramerateBox.Size = new System.Drawing.Size(130, 23);
+            this.vFramerateBox.TabIndex = 33;
+            this.vFramerateBox.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // vFramerateLabel
+            // 
+            this.vFramerateLabel.AutoSize = true;
+            this.vFramerateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vFramerateLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.vFramerateLabel.Location = new System.Drawing.Point(147, 249);
+            this.vFramerateLabel.Name = "vFramerateLabel";
+            this.vFramerateLabel.Size = new System.Drawing.Size(132, 15);
+            this.vFramerateLabel.TabIndex = 34;
+            this.vFramerateLabel.Text = "Video Framerate (FPS)";
+            // 
+            // btnSourceDesktop
+            // 
+            this.btnSourceDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSourceDesktop.Location = new System.Drawing.Point(313, 190);
+            this.btnSourceDesktop.Name = "btnSourceDesktop";
+            this.btnSourceDesktop.Size = new System.Drawing.Size(147, 24);
+            this.btnSourceDesktop.TabIndex = 35;
+            this.btnSourceDesktop.Text = "Windows desktop";
+            this.btnSourceDesktop.UseVisualStyleBackColor = true;
+            this.btnSourceDesktop.Click += new System.EventHandler(this.btnSourceDesktop_Click);
+            // 
+            // selectSourceLabel
+            // 
+            this.selectSourceLabel.AutoSize = true;
+            this.selectSourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectSourceLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.selectSourceLabel.Location = new System.Drawing.Point(192, 151);
+            this.selectSourceLabel.Name = "selectSourceLabel";
+            this.selectSourceLabel.Size = new System.Drawing.Size(216, 20);
+            this.selectSourceLabel.TabIndex = 36;
+            this.selectSourceLabel.Text = "What do you want to stream?";
+            // 
+            // aspectSelectLabel
+            // 
+            this.aspectSelectLabel.AutoSize = true;
+            this.aspectSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aspectSelectLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.aspectSelectLabel.Location = new System.Drawing.Point(32, 108);
+            this.aspectSelectLabel.Name = "aspectSelectLabel";
+            this.aspectSelectLabel.Size = new System.Drawing.Size(204, 17);
+            this.aspectSelectLabel.TabIndex = 37;
+            this.aspectSelectLabel.Text = "Select your screen aspect ratio";
+            // 
+            // aspect43Radio
+            // 
+            this.aspect43Radio.AutoSize = true;
+            this.aspect43Radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aspect43Radio.ForeColor = System.Drawing.Color.LightGray;
+            this.aspect43Radio.Location = new System.Drawing.Point(431, 108);
+            this.aspect43Radio.Name = "aspect43Radio";
+            this.aspect43Radio.Size = new System.Drawing.Size(46, 21);
+            this.aspect43Radio.TabIndex = 40;
+            this.aspect43Radio.Text = "4:3";
+            this.aspect43Radio.UseVisualStyleBackColor = true;
+            // 
+            // aspect169Radio
+            // 
+            this.aspect169Radio.AutoSize = true;
+            this.aspect169Radio.Checked = true;
+            this.aspect169Radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aspect169Radio.ForeColor = System.Drawing.Color.LightGray;
+            this.aspect169Radio.Location = new System.Drawing.Point(265, 106);
+            this.aspect169Radio.Name = "aspect169Radio";
+            this.aspect169Radio.Size = new System.Drawing.Size(54, 21);
+            this.aspect169Radio.TabIndex = 41;
+            this.aspect169Radio.TabStop = true;
+            this.aspect169Radio.Text = "16:9";
+            this.aspect169Radio.UseVisualStyleBackColor = true;
+            // 
+            // picture169
+            // 
+            this.picture169.BackColor = System.Drawing.Color.DimGray;
+            this.picture169.Location = new System.Drawing.Point(322, 94);
+            this.picture169.Name = "picture169";
+            this.picture169.Size = new System.Drawing.Size(80, 45);
+            this.picture169.TabIndex = 42;
+            this.picture169.TabStop = false;
+            // 
+            // picture43
+            // 
+            this.picture43.BackColor = System.Drawing.Color.DimGray;
+            this.picture43.Location = new System.Drawing.Point(480, 94);
+            this.picture43.Name = "picture43";
+            this.picture43.Size = new System.Drawing.Size(60, 45);
+            this.picture43.TabIndex = 43;
+            this.picture43.TabStop = false;
             // 
             // Form1
             // 
@@ -413,33 +549,43 @@
             this.BackgroundImage = global::Stream_Helper.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 480);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.picture43);
+            this.Controls.Add(this.picture169);
+            this.Controls.Add(this.aspect169Radio);
+            this.Controls.Add(this.aspect43Radio);
+            this.Controls.Add(this.aspectSelectLabel);
+            this.Controls.Add(this.selectSourceLabel);
+            this.Controls.Add(this.btnSourceDesktop);
+            this.Controls.Add(this.vFramerateLabel);
+            this.Controls.Add(this.vFramerateBox);
+            this.Controls.Add(this.btnSourceFile);
+            this.Controls.Add(this.step3Label);
+            this.Controls.Add(this.step2Label);
+            this.Controls.Add(this.step1Label);
+            this.Controls.Add(this.vlcNotFoundLabel);
             this.Controls.Add(this.streamURLbox);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.vVertResLabel);
+            this.Controls.Add(this.vHorizResLabel);
             this.Controls.Add(this.vVertRes);
             this.Controls.Add(this.vHorizRes);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.streamUrlLabel);
             this.Controls.Add(this.aSampleRateCombo);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.aSampleLabel);
             this.Controls.Add(this.aBitrateBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.aBitrateLabel);
+            this.Controls.Add(this.vBitrateLabel);
             this.Controls.Add(this.vBitrateBox);
             this.Controls.Add(this.portBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.portLabel);
+            this.Controls.Add(this.selectFileLabel);
+            this.Controls.Add(this.ipLabel);
             this.Controls.Add(this.ipCombo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStream);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.filePathBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.appTitleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -447,40 +593,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.portBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vBitrateBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBitrateBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vFramerateBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture169)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture43)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label appTitleLabel;
         private System.Windows.Forms.TextBox filePathBox;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button btnStream;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.ComboBox ipCombo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ipLabel;
+        private System.Windows.Forms.Label selectFileLabel;
+        private System.Windows.Forms.Label portLabel;
         private System.Windows.Forms.NumericUpDown portBox;
         private System.Windows.Forms.NumericUpDown vBitrateBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label vBitrateLabel;
+        private System.Windows.Forms.Label aBitrateLabel;
         private System.Windows.Forms.NumericUpDown aBitrateBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label aSampleLabel;
         private System.Windows.Forms.ComboBox aSampleRateCombo;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label streamUrlLabel;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox vHorizRes;
         private System.Windows.Forms.TextBox vVertRes;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label vHorizResLabel;
+        private System.Windows.Forms.Label vVertResLabel;
         private System.Windows.Forms.TextBox streamURLbox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label vlcNotFoundLabel;
+        private System.Windows.Forms.Label step1Label;
+        private System.Windows.Forms.Label step2Label;
+        private System.Windows.Forms.Label step3Label;
+        private System.Windows.Forms.Button btnSourceFile;
+        private System.Windows.Forms.NumericUpDown vFramerateBox;
+        private System.Windows.Forms.Label vFramerateLabel;
+        private System.Windows.Forms.Button btnSourceDesktop;
+        private System.Windows.Forms.Label selectSourceLabel;
+        private System.Windows.Forms.Label aspectSelectLabel;
+        private System.Windows.Forms.RadioButton aspect43Radio;
+        private System.Windows.Forms.RadioButton aspect169Radio;
+        private System.Windows.Forms.PictureBox picture169;
+        private System.Windows.Forms.PictureBox picture43;
     }
 }
 
