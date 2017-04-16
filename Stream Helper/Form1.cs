@@ -105,9 +105,9 @@ namespace Stream_Helper
 
             if (vlcPathFound != true)
             {
-                if (File.Exists(@"C:\Program Files\VideoLAN\VLC\vlc.exe"))
+                if (File.Exists(@"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"))
                 {
-                    vlcExePath = (@"C:\Program Files\VideoLAN\VLC\");
+                    vlcExePath = (@"C:\Program Files (x86)\VideoLAN\VLC\");
                     vlcNotFoundLabel.Visible = false;
                     vlcPathFound = true;
                 }
@@ -115,12 +115,14 @@ namespace Stream_Helper
 
             if (vlcPathFound != true)
             {
-                if (File.Exists(@"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"))
+                if (File.Exists(@"C:\Program Files\VideoLAN\VLC\vlc.exe"))
                 {
-                    vlcExePath = (@"C:\Program Files (x86)\VideoLAN\VLC\");
+                    vlcExePath = (@"C:\Program Files\VideoLAN\VLC\");
                     vlcNotFoundLabel.Visible = false;
                 }
             }
+
+
 
             if (vlcExePath == null)
             {
@@ -334,12 +336,30 @@ namespace Stream_Helper
             step3Label.Visible = false;
             btnStream.Visible = false;
             btnReset.Visible = false;
+
+            note1Label.Visible = true;
+            note1Text.Visible = true;
+            dlExeLabel.Visible = true;
+            dlZipLabel.Visible = true;
+            dlScreenCapRecLabel.Visible = true;
+            documentationLabel.Visible = true;
+            bugReportLabel.Visible = true;
+            contactLabel.Visible = true;
         }
 
         // stream a file button
         private void btnSourceFile_Click(object sender, EventArgs e)
         {
             streamSource = "file";
+
+            note1Label.Visible = false;
+            note1Text.Visible = false;
+            dlExeLabel.Visible = false;
+            dlZipLabel.Visible = false;
+            dlScreenCapRecLabel.Visible = false;
+            documentationLabel.Visible = false;
+            bugReportLabel.Visible = false;
+            contactLabel.Visible = false;
 
             selectSourceLabel.Visible = false;
             btnSourceFile.Visible = false;
@@ -370,6 +390,15 @@ namespace Stream_Helper
         {
             streamSource = "desktop";
 
+            note1Label.Visible = false;
+            note1Text.Visible = false;
+            dlExeLabel.Visible = false;
+            dlZipLabel.Visible = false;
+            dlScreenCapRecLabel.Visible = false;
+            documentationLabel.Visible = false;
+            bugReportLabel.Visible = false;
+            contactLabel.Visible = false;
+
             selectSourceLabel.Visible = false;
             btnSourceFile.Visible = false;
             btnSourceDesktop.Visible = false;
@@ -398,6 +427,44 @@ namespace Stream_Helper
             btnReset.Visible = true;
         }
 
+        // dl vlc zip button
+        private void dlZipLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://download.videolan.org/pub/videolan/vlc/2.1.5/win32/vlc-2.1.5-win32.zip");
+        }
 
+        // dl vlc exe label
+        private void dlExeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://download.videolan.org/pub/videolan/vlc/2.1.5/win32/vlc-2.1.5-win32.exe");
+        }
+
+        // dl screen-capture-recorder button
+        private void dlScreenCapRecLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/0B6k8Z8ibdu9UM25rdGNXcW1hNVE/view?usp=sharing");
+
+        }
+
+        // documentation link button
+        private void documentationLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1SreCBUgOSjKvq-qXtp3ouodjSQ9O2xnK4uNmcg8jjGM/edit?usp=sharing");
+
+        }
+
+        // bug report button
+        private void bugReportLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLScgIOmZXcJdV7125t6f0mtTREAWVJ2QtXy5Rd9q-pDeNVsbRg/viewform?usp=sf_link");
+
+        }
+
+        // contact developer button
+        private void contactLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSerurASzHCeKRWlQl9Dou_vZErsKG4xSx-7FMPWIHMgscp9Fw/viewform?usp=sf_link");
+
+        }
     }
 }

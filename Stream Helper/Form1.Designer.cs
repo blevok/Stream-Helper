@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.appTitleLabel = new System.Windows.Forms.Label();
             this.filePathBox = new System.Windows.Forms.TextBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
@@ -66,6 +67,14 @@
             this.aspect169Radio = new System.Windows.Forms.RadioButton();
             this.picture169 = new System.Windows.Forms.PictureBox();
             this.picture43 = new System.Windows.Forms.PictureBox();
+            this.note1Label = new System.Windows.Forms.Label();
+            this.note1Text = new System.Windows.Forms.TextBox();
+            this.dlExeLabel = new System.Windows.Forms.LinkLabel();
+            this.dlZipLabel = new System.Windows.Forms.LinkLabel();
+            this.dlScreenCapRecLabel = new System.Windows.Forms.LinkLabel();
+            this.documentationLabel = new System.Windows.Forms.LinkLabel();
+            this.bugReportLabel = new System.Windows.Forms.LinkLabel();
+            this.contactLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vBitrateBox)).BeginInit();
@@ -421,10 +430,10 @@
             // 
             // btnSourceFile
             // 
-            this.btnSourceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceFile.Location = new System.Drawing.Point(126, 190);
+            this.btnSourceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSourceFile.Location = new System.Drawing.Point(149, 113);
             this.btnSourceFile.Name = "btnSourceFile";
-            this.btnSourceFile.Size = new System.Drawing.Size(149, 24);
+            this.btnSourceFile.Size = new System.Drawing.Size(149, 27);
             this.btnSourceFile.TabIndex = 32;
             this.btnSourceFile.Text = "Video file";
             this.btnSourceFile.UseVisualStyleBackColor = true;
@@ -466,10 +475,10 @@
             // 
             // btnSourceDesktop
             // 
-            this.btnSourceDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceDesktop.Location = new System.Drawing.Point(313, 190);
+            this.btnSourceDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSourceDesktop.Location = new System.Drawing.Point(304, 113);
             this.btnSourceDesktop.Name = "btnSourceDesktop";
-            this.btnSourceDesktop.Size = new System.Drawing.Size(147, 24);
+            this.btnSourceDesktop.Size = new System.Drawing.Size(150, 27);
             this.btnSourceDesktop.TabIndex = 35;
             this.btnSourceDesktop.Text = "Windows desktop";
             this.btnSourceDesktop.UseVisualStyleBackColor = true;
@@ -478,11 +487,11 @@
             // selectSourceLabel
             // 
             this.selectSourceLabel.AutoSize = true;
-            this.selectSourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectSourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectSourceLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.selectSourceLabel.Location = new System.Drawing.Point(192, 151);
+            this.selectSourceLabel.Location = new System.Drawing.Point(170, 80);
             this.selectSourceLabel.Name = "selectSourceLabel";
-            this.selectSourceLabel.Size = new System.Drawing.Size(216, 20);
+            this.selectSourceLabel.Size = new System.Drawing.Size(265, 25);
             this.selectSourceLabel.TabIndex = 36;
             this.selectSourceLabel.Text = "What do you want to stream?";
             // 
@@ -541,6 +550,121 @@
             this.picture43.TabIndex = 43;
             this.picture43.TabStop = false;
             // 
+            // note1Label
+            // 
+            this.note1Label.AutoSize = true;
+            this.note1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.note1Label.ForeColor = System.Drawing.Color.LightGray;
+            this.note1Label.Location = new System.Drawing.Point(28, 169);
+            this.note1Label.Name = "note1Label";
+            this.note1Label.Size = new System.Drawing.Size(55, 20);
+            this.note1Label.TabIndex = 44;
+            this.note1Label.Text = "Notes:";
+            // 
+            // note1Text
+            // 
+            this.note1Text.BackColor = System.Drawing.Color.Black;
+            this.note1Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.note1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.note1Text.ForeColor = System.Drawing.Color.LightGray;
+            this.note1Text.Location = new System.Drawing.Point(88, 169);
+            this.note1Text.Multiline = true;
+            this.note1Text.Name = "note1Text";
+            this.note1Text.ReadOnly = true;
+            this.note1Text.Size = new System.Drawing.Size(473, 206);
+            this.note1Text.TabIndex = 48;
+            this.note1Text.Text = resources.GetString("note1Text.Text");
+            // 
+            // dlExeLabel
+            // 
+            this.dlExeLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlExeLabel.AutoSize = true;
+            this.dlExeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dlExeLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlExeLabel.Location = new System.Drawing.Point(323, 329);
+            this.dlExeLabel.Name = "dlExeLabel";
+            this.dlExeLabel.Size = new System.Drawing.Size(46, 20);
+            this.dlExeLabel.TabIndex = 49;
+            this.dlExeLabel.TabStop = true;
+            this.dlExeLabel.Text = ".EXE";
+            this.dlExeLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlExeLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dlExeLabel_LinkClicked);
+            // 
+            // dlZipLabel
+            // 
+            this.dlZipLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlZipLabel.AutoSize = true;
+            this.dlZipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dlZipLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlZipLabel.Location = new System.Drawing.Point(279, 329);
+            this.dlZipLabel.Name = "dlZipLabel";
+            this.dlZipLabel.Size = new System.Drawing.Size(38, 20);
+            this.dlZipLabel.TabIndex = 50;
+            this.dlZipLabel.TabStop = true;
+            this.dlZipLabel.Text = ".ZIP";
+            this.dlZipLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlZipLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dlZipLabel_LinkClicked);
+            // 
+            // dlScreenCapRecLabel
+            // 
+            this.dlScreenCapRecLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlScreenCapRecLabel.AutoSize = true;
+            this.dlScreenCapRecLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dlScreenCapRecLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlScreenCapRecLabel.Location = new System.Drawing.Point(291, 209);
+            this.dlScreenCapRecLabel.Name = "dlScreenCapRecLabel";
+            this.dlScreenCapRecLabel.Size = new System.Drawing.Size(180, 20);
+            this.dlScreenCapRecLabel.TabIndex = 51;
+            this.dlScreenCapRecLabel.TabStop = true;
+            this.dlScreenCapRecLabel.Text = "screen-capture-recorder";
+            this.dlScreenCapRecLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.dlScreenCapRecLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dlScreenCapRecLabel_LinkClicked);
+            // 
+            // documentationLabel
+            // 
+            this.documentationLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.documentationLabel.AutoSize = true;
+            this.documentationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.documentationLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.documentationLabel.Location = new System.Drawing.Point(127, 436);
+            this.documentationLabel.Name = "documentationLabel";
+            this.documentationLabel.Size = new System.Drawing.Size(118, 20);
+            this.documentationLabel.TabIndex = 52;
+            this.documentationLabel.TabStop = true;
+            this.documentationLabel.Text = "Documentation";
+            this.documentationLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.documentationLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.documentationLabel_LinkClicked);
+            // 
+            // bugReportLabel
+            // 
+            this.bugReportLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.bugReportLabel.AutoSize = true;
+            this.bugReportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bugReportLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.bugReportLabel.Location = new System.Drawing.Point(251, 436);
+            this.bugReportLabel.Name = "bugReportLabel";
+            this.bugReportLabel.Size = new System.Drawing.Size(84, 20);
+            this.bugReportLabel.TabIndex = 53;
+            this.bugReportLabel.TabStop = true;
+            this.bugReportLabel.Text = "Bug report";
+            this.bugReportLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.bugReportLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bugReportLabel_LinkClicked);
+            // 
+            // contactLabel
+            // 
+            this.contactLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.contactLabel.AutoSize = true;
+            this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.contactLabel.Location = new System.Drawing.Point(341, 436);
+            this.contactLabel.Name = "contactLabel";
+            this.contactLabel.Size = new System.Drawing.Size(138, 20);
+            this.contactLabel.TabIndex = 54;
+            this.contactLabel.TabStop = true;
+            this.contactLabel.Text = "Contact developer";
+            this.contactLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.contactLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactLabel_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +673,14 @@
             this.BackgroundImage = global::Stream_Helper.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 480);
+            this.Controls.Add(this.contactLabel);
+            this.Controls.Add(this.bugReportLabel);
+            this.Controls.Add(this.documentationLabel);
+            this.Controls.Add(this.dlScreenCapRecLabel);
+            this.Controls.Add(this.dlZipLabel);
+            this.Controls.Add(this.dlExeLabel);
+            this.Controls.Add(this.note1Text);
+            this.Controls.Add(this.note1Label);
             this.Controls.Add(this.picture43);
             this.Controls.Add(this.picture169);
             this.Controls.Add(this.aspect169Radio);
@@ -640,6 +772,14 @@
         private System.Windows.Forms.RadioButton aspect169Radio;
         private System.Windows.Forms.PictureBox picture169;
         private System.Windows.Forms.PictureBox picture43;
+        private System.Windows.Forms.Label note1Label;
+        private System.Windows.Forms.TextBox note1Text;
+        private System.Windows.Forms.LinkLabel dlExeLabel;
+        private System.Windows.Forms.LinkLabel dlZipLabel;
+        private System.Windows.Forms.LinkLabel dlScreenCapRecLabel;
+        private System.Windows.Forms.LinkLabel documentationLabel;
+        private System.Windows.Forms.LinkLabel bugReportLabel;
+        private System.Windows.Forms.LinkLabel contactLabel;
     }
 }
 
