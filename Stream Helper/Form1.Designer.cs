@@ -75,6 +75,11 @@
             this.documentationLabel = new System.Windows.Forms.LinkLabel();
             this.bugReportLabel = new System.Windows.Forms.LinkLabel();
             this.contactLabel = new System.Windows.Forms.LinkLabel();
+            this.scaleBox = new System.Windows.Forms.NumericUpDown();
+            this.scaleLabel = new System.Windows.Forms.Label();
+            this.cachingMsBox = new System.Windows.Forms.NumericUpDown();
+            this.cachingMsLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vBitrateBox)).BeginInit();
@@ -82,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vFramerateBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture169)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scaleBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cachingMsBox)).BeginInit();
             this.SuspendLayout();
             // 
             // appTitleLabel
@@ -117,7 +124,7 @@
             // btnStream
             // 
             this.btnStream.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStream.Location = new System.Drawing.Point(35, 334);
+            this.btnStream.Location = new System.Drawing.Point(35, 361);
             this.btnStream.Name = "btnStream";
             this.btnStream.Size = new System.Drawing.Size(100, 26);
             this.btnStream.TabIndex = 4;
@@ -140,7 +147,7 @@
             // 
             this.ipCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipCombo.FormattingEnabled = true;
-            this.ipCombo.Location = new System.Drawing.Point(35, 188);
+            this.ipCombo.Location = new System.Drawing.Point(35, 170);
             this.ipCombo.Name = "ipCombo";
             this.ipCombo.Size = new System.Drawing.Size(373, 24);
             this.ipCombo.TabIndex = 7;
@@ -155,7 +162,7 @@
             this.ipLabel.AutoSize = true;
             this.ipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipLabel.ForeColor = System.Drawing.Color.Silver;
-            this.ipLabel.Location = new System.Drawing.Point(32, 168);
+            this.ipLabel.Location = new System.Drawing.Point(32, 150);
             this.ipLabel.Name = "ipLabel";
             this.ipLabel.Size = new System.Drawing.Size(346, 17);
             this.ipLabel.TabIndex = 8;
@@ -177,7 +184,7 @@
             this.portLabel.AutoSize = true;
             this.portLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.portLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.portLabel.Location = new System.Drawing.Point(411, 168);
+            this.portLabel.Location = new System.Drawing.Point(411, 150);
             this.portLabel.Name = "portLabel";
             this.portLabel.Size = new System.Drawing.Size(88, 17);
             this.portLabel.TabIndex = 11;
@@ -186,7 +193,7 @@
             // portBox
             // 
             this.portBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.portBox.Location = new System.Drawing.Point(414, 189);
+            this.portBox.Location = new System.Drawing.Point(414, 171);
             this.portBox.Maximum = new decimal(new int[] {
             49151,
             0,
@@ -198,7 +205,7 @@
             0,
             0});
             this.portBox.Name = "portBox";
-            this.portBox.Size = new System.Drawing.Size(120, 23);
+            this.portBox.Size = new System.Drawing.Size(85, 23);
             this.portBox.TabIndex = 12;
             this.portBox.Value = new decimal(new int[] {
             8080,
@@ -214,7 +221,7 @@
             0,
             0,
             0});
-            this.vBitrateBox.Location = new System.Drawing.Point(35, 269);
+            this.vBitrateBox.Location = new System.Drawing.Point(35, 239);
             this.vBitrateBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -239,7 +246,7 @@
             this.vBitrateLabel.AutoSize = true;
             this.vBitrateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vBitrateLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.vBitrateLabel.Location = new System.Drawing.Point(32, 249);
+            this.vBitrateLabel.Location = new System.Drawing.Point(32, 219);
             this.vBitrateLabel.Name = "vBitrateLabel";
             this.vBitrateLabel.Size = new System.Drawing.Size(109, 15);
             this.vBitrateLabel.TabIndex = 14;
@@ -250,7 +257,7 @@
             this.aBitrateLabel.AutoSize = true;
             this.aBitrateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aBitrateLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.aBitrateLabel.Location = new System.Drawing.Point(280, 249);
+            this.aBitrateLabel.Location = new System.Drawing.Point(32, 287);
             this.aBitrateLabel.Name = "aBitrateLabel";
             this.aBitrateLabel.Size = new System.Drawing.Size(109, 15);
             this.aBitrateLabel.TabIndex = 15;
@@ -264,7 +271,7 @@
             0,
             0,
             0});
-            this.aBitrateBox.Location = new System.Drawing.Point(283, 269);
+            this.aBitrateBox.Location = new System.Drawing.Point(35, 308);
             this.aBitrateBox.Maximum = new decimal(new int[] {
             512,
             0,
@@ -289,7 +296,7 @@
             this.aSampleLabel.AutoSize = true;
             this.aSampleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aSampleLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.aSampleLabel.Location = new System.Drawing.Point(392, 249);
+            this.aSampleLabel.Location = new System.Drawing.Point(144, 287);
             this.aSampleLabel.Name = "aSampleLabel";
             this.aSampleLabel.Size = new System.Drawing.Size(139, 15);
             this.aSampleLabel.TabIndex = 17;
@@ -305,7 +312,7 @@
             "22050",
             "44100",
             "48000"});
-            this.aSampleRateCombo.Location = new System.Drawing.Point(395, 269);
+            this.aSampleRateCombo.Location = new System.Drawing.Point(147, 308);
             this.aSampleRateCombo.Name = "aSampleRateCombo";
             this.aSampleRateCombo.Size = new System.Drawing.Size(136, 24);
             this.aSampleRateCombo.TabIndex = 18;
@@ -316,7 +323,7 @@
             this.streamUrlLabel.AutoSize = true;
             this.streamUrlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.streamUrlLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.streamUrlLabel.Location = new System.Drawing.Point(99, 398);
+            this.streamUrlLabel.Location = new System.Drawing.Point(269, 389);
             this.streamUrlLabel.Name = "streamUrlLabel";
             this.streamUrlLabel.Size = new System.Drawing.Size(263, 20);
             this.streamUrlLabel.TabIndex = 19;
@@ -325,11 +332,11 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(503, 430);
+            this.btnReset.Location = new System.Drawing.Point(141, 361);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 26);
+            this.btnReset.Size = new System.Drawing.Size(61, 26);
             this.btnReset.TabIndex = 20;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Back";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -378,7 +385,7 @@
             this.streamURLbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.streamURLbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.streamURLbox.ForeColor = System.Drawing.Color.LightGray;
-            this.streamURLbox.Location = new System.Drawing.Point(55, 421);
+            this.streamURLbox.Location = new System.Drawing.Point(225, 412);
             this.streamURLbox.Name = "streamURLbox";
             this.streamURLbox.Size = new System.Drawing.Size(359, 32);
             this.streamURLbox.TabIndex = 26;
@@ -411,7 +418,7 @@
             this.step2Label.AutoSize = true;
             this.step2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.step2Label.ForeColor = System.Drawing.Color.Lime;
-            this.step2Label.Location = new System.Drawing.Point(9, 191);
+            this.step2Label.Location = new System.Drawing.Point(9, 173);
             this.step2Label.Name = "step2Label";
             this.step2Label.Size = new System.Drawing.Size(20, 17);
             this.step2Label.TabIndex = 30;
@@ -422,7 +429,7 @@
             this.step3Label.AutoSize = true;
             this.step3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.step3Label.ForeColor = System.Drawing.Color.Lime;
-            this.step3Label.Location = new System.Drawing.Point(9, 339);
+            this.step3Label.Location = new System.Drawing.Point(9, 366);
             this.step3Label.Name = "step3Label";
             this.step3Label.Size = new System.Drawing.Size(20, 17);
             this.step3Label.TabIndex = 31;
@@ -442,7 +449,7 @@
             // vFramerateBox
             // 
             this.vFramerateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vFramerateBox.Location = new System.Drawing.Point(147, 269);
+            this.vFramerateBox.Location = new System.Drawing.Point(147, 239);
             this.vFramerateBox.Maximum = new decimal(new int[] {
             60,
             0,
@@ -467,7 +474,7 @@
             this.vFramerateLabel.AutoSize = true;
             this.vFramerateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vFramerateLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.vFramerateLabel.Location = new System.Drawing.Point(147, 249);
+            this.vFramerateLabel.Location = new System.Drawing.Point(147, 219);
             this.vFramerateLabel.Name = "vFramerateLabel";
             this.vFramerateLabel.Size = new System.Drawing.Size(132, 15);
             this.vFramerateLabel.TabIndex = 34;
@@ -626,7 +633,7 @@
             this.documentationLabel.AutoSize = true;
             this.documentationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.documentationLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.documentationLabel.Location = new System.Drawing.Point(127, 436);
+            this.documentationLabel.Location = new System.Drawing.Point(127, 417);
             this.documentationLabel.Name = "documentationLabel";
             this.documentationLabel.Size = new System.Drawing.Size(118, 20);
             this.documentationLabel.TabIndex = 52;
@@ -641,7 +648,7 @@
             this.bugReportLabel.AutoSize = true;
             this.bugReportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bugReportLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.bugReportLabel.Location = new System.Drawing.Point(251, 436);
+            this.bugReportLabel.Location = new System.Drawing.Point(251, 417);
             this.bugReportLabel.Name = "bugReportLabel";
             this.bugReportLabel.Size = new System.Drawing.Size(84, 20);
             this.bugReportLabel.TabIndex = 53;
@@ -656,7 +663,7 @@
             this.contactLabel.AutoSize = true;
             this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.contactLabel.Location = new System.Drawing.Point(341, 436);
+            this.contactLabel.Location = new System.Drawing.Point(341, 417);
             this.contactLabel.Name = "contactLabel";
             this.contactLabel.Size = new System.Drawing.Size(138, 20);
             this.contactLabel.TabIndex = 54;
@@ -664,6 +671,85 @@
             this.contactLabel.Text = "Contact developer";
             this.contactLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.contactLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactLabel_LinkClicked);
+            // 
+            // scaleBox
+            // 
+            this.scaleBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scaleBox.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.scaleBox.Location = new System.Drawing.Point(283, 239);
+            this.scaleBox.Minimum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.scaleBox.Name = "scaleBox";
+            this.scaleBox.Size = new System.Drawing.Size(120, 23);
+            this.scaleBox.TabIndex = 55;
+            this.scaleBox.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // scaleLabel
+            // 
+            this.scaleLabel.AutoSize = true;
+            this.scaleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scaleLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.scaleLabel.Location = new System.Drawing.Point(280, 217);
+            this.scaleLabel.Name = "scaleLabel";
+            this.scaleLabel.Size = new System.Drawing.Size(120, 15);
+            this.scaleLabel.TabIndex = 56;
+            this.scaleLabel.Text = "Resolution scale (%)";
+            // 
+            // cachingMsBox
+            // 
+            this.cachingMsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cachingMsBox.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.cachingMsBox.Location = new System.Drawing.Point(409, 239);
+            this.cachingMsBox.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.cachingMsBox.Name = "cachingMsBox";
+            this.cachingMsBox.Size = new System.Drawing.Size(77, 23);
+            this.cachingMsBox.TabIndex = 57;
+            this.cachingMsBox.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            // 
+            // cachingMsLabel
+            // 
+            this.cachingMsLabel.AutoSize = true;
+            this.cachingMsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cachingMsLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.cachingMsLabel.Location = new System.Drawing.Point(406, 217);
+            this.cachingMsLabel.Name = "cachingMsLabel";
+            this.cachingMsLabel.Size = new System.Drawing.Size(80, 15);
+            this.cachingMsLabel.TabIndex = 58;
+            this.cachingMsLabel.Text = "Caching (ms)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(269, 456);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "v1.0.0.0";
             // 
             // Form1
             // 
@@ -673,6 +759,11 @@
             this.BackgroundImage = global::Stream_Helper.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 480);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cachingMsLabel);
+            this.Controls.Add(this.cachingMsBox);
+            this.Controls.Add(this.scaleLabel);
+            this.Controls.Add(this.scaleBox);
             this.Controls.Add(this.contactLabel);
             this.Controls.Add(this.bugReportLabel);
             this.Controls.Add(this.documentationLabel);
@@ -728,6 +819,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vFramerateBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture169)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scaleBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cachingMsBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -780,6 +873,11 @@
         private System.Windows.Forms.LinkLabel documentationLabel;
         private System.Windows.Forms.LinkLabel bugReportLabel;
         private System.Windows.Forms.LinkLabel contactLabel;
+        private System.Windows.Forms.NumericUpDown scaleBox;
+        private System.Windows.Forms.Label scaleLabel;
+        private System.Windows.Forms.NumericUpDown cachingMsBox;
+        private System.Windows.Forms.Label cachingMsLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

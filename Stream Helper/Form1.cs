@@ -32,6 +32,9 @@ namespace Stream_Helper
         public bool vlcPathFound;
         public string streamSource;
         public string streamAspect;
+        public string vScale;
+        public string cachingMs;
+
         public Form1()
         {
             InitializeComponent();
@@ -64,8 +67,12 @@ namespace Stream_Helper
             btnReset.Visible = false;
             picture169.Visible = false;
             picture43.Visible = false;
+            scaleLabel.Visible = false;
+            scaleBox.Visible = false;
+            cachingMsBox.Visible = false;
+            cachingMsLabel.Visible = false;
 
-            
+
             // hide the stream url until stream is started
             streamURLbox.Visible = false;
             streamUrlLabel.Visible = false;
@@ -221,6 +228,17 @@ namespace Stream_Helper
             streamVframerate = vFramerateBox.Value.ToString();
             streamVhorizResolution = vHorizRes.Text;
             streamVvertResolution = vVertRes.Text;
+            cachingMs = cachingMsBox.Value.ToString();
+
+            if (scaleBox.Value == 100)
+            {
+                vScale = "1.0";
+            }
+            else
+            {
+                vScale = ("0." + scaleBox.Value.ToString());
+            }
+
 
             if (streamSource == "file")
             {
@@ -233,7 +251,7 @@ namespace Stream_Helper
                 //streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
                 try
                 {
-                    streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-keep  :file-caching=2000");
+                    streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep  :file-caching=" + cachingMs + "");
                 }
                 catch
                 {
@@ -260,7 +278,7 @@ namespace Stream_Helper
 
                 try
                 {
-                    streamCommandLine = ("dshow:// --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-keep :dshow-vdev=screen-capture-recorder :dshow-adev=virtual-audio-capturer :dshow-aspect-ratio=" + streamAspect + " :dshow-caching=2000");
+                    streamCommandLine = ("dshow:// --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep :dshow-vdev=screen-capture-recorder :dshow-adev=virtual-audio-capturer :dshow-aspect-ratio=" + streamAspect + " :dshow-caching=" + cachingMs + "");
                 }
                 catch
                 {
@@ -345,6 +363,12 @@ namespace Stream_Helper
             documentationLabel.Visible = true;
             bugReportLabel.Visible = true;
             contactLabel.Visible = true;
+            scaleLabel.Visible = false;
+            scaleBox.Visible = false;
+            scaleBox.Value = 100;
+            cachingMsBox.Value = 2000;
+            cachingMsBox.Visible = false;
+            cachingMsLabel.Visible = false;
         }
 
         // stream a file button
@@ -384,6 +408,10 @@ namespace Stream_Helper
             step3Label.Visible = true;
             btnStream.Visible = true;
             btnReset.Visible = true;
+            scaleLabel.Visible = true;
+            scaleBox.Visible = true;
+            cachingMsBox.Visible = true;
+            cachingMsLabel.Visible = true;
         }
         // stream desktop button
         private void btnSourceDesktop_Click(object sender, EventArgs e)
@@ -425,6 +453,10 @@ namespace Stream_Helper
             step3Label.Visible = true;
             btnStream.Visible = true;
             btnReset.Visible = true;
+            scaleLabel.Visible = true;
+            scaleBox.Visible = true;
+            cachingMsBox.Visible = true;
+            cachingMsLabel.Visible = true;
         }
 
         // dl vlc zip button
