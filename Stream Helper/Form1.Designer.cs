@@ -438,7 +438,7 @@
             // btnSourceFile
             // 
             this.btnSourceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceFile.Location = new System.Drawing.Point(149, 113);
+            this.btnSourceFile.Location = new System.Drawing.Point(146, 113);
             this.btnSourceFile.Name = "btnSourceFile";
             this.btnSourceFile.Size = new System.Drawing.Size(149, 27);
             this.btnSourceFile.TabIndex = 32;
@@ -483,7 +483,7 @@
             // btnSourceDesktop
             // 
             this.btnSourceDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceDesktop.Location = new System.Drawing.Point(304, 113);
+            this.btnSourceDesktop.Location = new System.Drawing.Point(301, 113);
             this.btnSourceDesktop.Name = "btnSourceDesktop";
             this.btnSourceDesktop.Size = new System.Drawing.Size(150, 27);
             this.btnSourceDesktop.TabIndex = 35;
@@ -496,7 +496,7 @@
             this.selectSourceLabel.AutoSize = true;
             this.selectSourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectSourceLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.selectSourceLabel.Location = new System.Drawing.Point(170, 80);
+            this.selectSourceLabel.Location = new System.Drawing.Point(167, 80);
             this.selectSourceLabel.Name = "selectSourceLabel";
             this.selectSourceLabel.Size = new System.Drawing.Size(265, 25);
             this.selectSourceLabel.TabIndex = 36;
@@ -561,8 +561,8 @@
             // 
             this.note1Label.AutoSize = true;
             this.note1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.note1Label.ForeColor = System.Drawing.Color.LightGray;
-            this.note1Label.Location = new System.Drawing.Point(28, 169);
+            this.note1Label.ForeColor = System.Drawing.Color.Gray;
+            this.note1Label.Location = new System.Drawing.Point(28, 168);
             this.note1Label.Name = "note1Label";
             this.note1Label.Size = new System.Drawing.Size(55, 20);
             this.note1Label.TabIndex = 44;
@@ -572,8 +572,10 @@
             // 
             this.note1Text.BackColor = System.Drawing.Color.Black;
             this.note1Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.note1Text.Enabled = false;
             this.note1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.note1Text.ForeColor = System.Drawing.Color.LightGray;
+            this.note1Text.ForeColor = System.Drawing.Color.White;
+            this.note1Text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.note1Text.Location = new System.Drawing.Point(88, 169);
             this.note1Text.Multiline = true;
             this.note1Text.Name = "note1Text";
@@ -744,12 +746,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(269, 456);
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(274, 456);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 59;
-            this.label1.Text = "v1.0.0.0";
+            this.label1.Text = "v1.0.0.1";
             // 
             // Form1
             // 
@@ -810,6 +812,7 @@
             this.Controls.Add(this.filePathBox);
             this.Controls.Add(this.appTitleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
