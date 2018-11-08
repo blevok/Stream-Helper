@@ -24,12 +24,15 @@ You can find Stream Helper documentation [here](https://docs.google.com/document
 ### Screenshots: 
 
 **Main:**
+
 ![Main](https://raw.githubusercontent.com/blevok/Stream-Helper/master/Stream%20Helper/sh-main.png)
 
 **File:**
+
 ![File](https://raw.githubusercontent.com/blevok/Stream-Helper/master/Stream%20Helper/sh-file.png)
 
 **Desktop:**
+
 ![Desktop](https://raw.githubusercontent.com/blevok/Stream-Helper/master/Stream%20Helper/sh-desktop.png)
 
 ------------------------------
