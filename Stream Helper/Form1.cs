@@ -481,7 +481,7 @@ namespace Stream_Helper
         // github button
         private void githubLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/blevok");
+            System.Diagnostics.Process.Start("https://github.com/blevok/Stream-Helper");
 
         }
     }
