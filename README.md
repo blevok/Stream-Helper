@@ -14,4 +14,12 @@ When you start Stream Helper, it will automatically detect if VLC is installed.
 If VLC is not installed in the default location, you will need to place “Stream Helper.exe” in the VLC directory, in the same folder that contains the “vlc.exe” executable.
 If you have more than one version, place Stream Helper in the VLC folder that you prefer to use. Stream Helper will look for vlc.exe in it’s current folder first, before looking in the default install location.
 
+------------------------------
+
+### Documentation :
 You can find Stream Helper documentation [here](https://docs.google.com/document/d/1SreCBUgOSjKvq-qXtp3ouodjSQ9O2xnK4uNmcg8jjGM/edit?usp=sharing).
+
+------------------------------
+
+### License :
+Stream Helper is released under the GPL v2.0 license.
