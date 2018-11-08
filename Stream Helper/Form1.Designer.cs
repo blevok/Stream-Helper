@@ -73,8 +73,7 @@
             this.dlZipLabel = new System.Windows.Forms.LinkLabel();
             this.dlScreenCapRecLabel = new System.Windows.Forms.LinkLabel();
             this.documentationLabel = new System.Windows.Forms.LinkLabel();
-            this.bugReportLabel = new System.Windows.Forms.LinkLabel();
-            this.contactLabel = new System.Windows.Forms.LinkLabel();
+            this.githubLabel = new System.Windows.Forms.LinkLabel();
             this.scaleBox = new System.Windows.Forms.NumericUpDown();
             this.scaleLabel = new System.Windows.Forms.Label();
             this.cachingMsBox = new System.Windows.Forms.NumericUpDown();
@@ -635,7 +634,7 @@
             this.documentationLabel.AutoSize = true;
             this.documentationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.documentationLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.documentationLabel.Location = new System.Drawing.Point(127, 417);
+            this.documentationLabel.Location = new System.Drawing.Point(200, 417);
             this.documentationLabel.Name = "documentationLabel";
             this.documentationLabel.Size = new System.Drawing.Size(118, 20);
             this.documentationLabel.TabIndex = 52;
@@ -644,35 +643,20 @@
             this.documentationLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.documentationLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.documentationLabel_LinkClicked);
             // 
-            // bugReportLabel
+            // githubLabel
             // 
-            this.bugReportLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            this.bugReportLabel.AutoSize = true;
-            this.bugReportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bugReportLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.bugReportLabel.Location = new System.Drawing.Point(251, 417);
-            this.bugReportLabel.Name = "bugReportLabel";
-            this.bugReportLabel.Size = new System.Drawing.Size(84, 20);
-            this.bugReportLabel.TabIndex = 53;
-            this.bugReportLabel.TabStop = true;
-            this.bugReportLabel.Text = "Bug report";
-            this.bugReportLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            this.bugReportLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bugReportLabel_LinkClicked);
-            // 
-            // contactLabel
-            // 
-            this.contactLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            this.contactLabel.AutoSize = true;
-            this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.contactLabel.Location = new System.Drawing.Point(341, 417);
-            this.contactLabel.Name = "contactLabel";
-            this.contactLabel.Size = new System.Drawing.Size(138, 20);
-            this.contactLabel.TabIndex = 54;
-            this.contactLabel.TabStop = true;
-            this.contactLabel.Text = "Contact developer";
-            this.contactLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            this.contactLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactLabel_LinkClicked);
+            this.githubLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.githubLabel.AutoSize = true;
+            this.githubLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.githubLabel.Location = new System.Drawing.Point(327, 417);
+            this.githubLabel.Name = "githubLabel";
+            this.githubLabel.Size = new System.Drawing.Size(57, 20);
+            this.githubLabel.TabIndex = 54;
+            this.githubLabel.TabStop = true;
+            this.githubLabel.Text = "Github";
+            this.githubLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.githubLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.githubLabel_LinkClicked);
             // 
             // scaleBox
             // 
@@ -751,7 +735,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 59;
-            this.label1.Text = "v1.0.0.1";
+            this.label1.Text = "v1.0.0.2";
             // 
             // Form1
             // 
@@ -766,8 +750,7 @@
             this.Controls.Add(this.cachingMsBox);
             this.Controls.Add(this.scaleLabel);
             this.Controls.Add(this.scaleBox);
-            this.Controls.Add(this.contactLabel);
-            this.Controls.Add(this.bugReportLabel);
+            this.Controls.Add(this.githubLabel);
             this.Controls.Add(this.documentationLabel);
             this.Controls.Add(this.dlScreenCapRecLabel);
             this.Controls.Add(this.dlZipLabel);
@@ -874,8 +857,7 @@
         private System.Windows.Forms.LinkLabel dlZipLabel;
         private System.Windows.Forms.LinkLabel dlScreenCapRecLabel;
         private System.Windows.Forms.LinkLabel documentationLabel;
-        private System.Windows.Forms.LinkLabel bugReportLabel;
-        private System.Windows.Forms.LinkLabel contactLabel;
+        private System.Windows.Forms.LinkLabel githubLabel;
         private System.Windows.Forms.NumericUpDown scaleBox;
         private System.Windows.Forms.Label scaleLabel;
         private System.Windows.Forms.NumericUpDown cachingMsBox;

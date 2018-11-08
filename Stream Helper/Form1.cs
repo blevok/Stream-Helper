@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -361,8 +357,7 @@ namespace Stream_Helper
             dlZipLabel.Visible = true;
             dlScreenCapRecLabel.Visible = true;
             documentationLabel.Visible = true;
-            bugReportLabel.Visible = true;
-            contactLabel.Visible = true;
+            githubLabel.Visible = true;
             scaleLabel.Visible = false;
             scaleBox.Visible = false;
             scaleBox.Value = 100;
@@ -382,8 +377,7 @@ namespace Stream_Helper
             dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
             documentationLabel.Visible = false;
-            bugReportLabel.Visible = false;
-            contactLabel.Visible = false;
+            githubLabel.Visible = false;
 
             selectSourceLabel.Visible = false;
             btnSourceFile.Visible = false;
@@ -424,8 +418,7 @@ namespace Stream_Helper
             dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
             documentationLabel.Visible = false;
-            bugReportLabel.Visible = false;
-            contactLabel.Visible = false;
+            githubLabel.Visible = false;
 
             selectSourceLabel.Visible = false;
             btnSourceFile.Visible = false;
@@ -485,17 +478,10 @@ namespace Stream_Helper
 
         }
 
-        // bug report button
-        private void bugReportLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // github button
+        private void githubLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLScgIOmZXcJdV7125t6f0mtTREAWVJ2QtXy5Rd9q-pDeNVsbRg/viewform?usp=sf_link");
-
-        }
-
-        // contact developer button
-        private void contactLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSerurASzHCeKRWlQl9Dou_vZErsKG4xSx-7FMPWIHMgscp9Fw/viewform?usp=sf_link");
+            System.Diagnostics.Process.Start("https://github.com/blevok");
 
         }
     }
