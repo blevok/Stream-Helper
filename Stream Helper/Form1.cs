@@ -30,12 +30,13 @@ namespace Stream_Helper
         public string streamAspect;
         public string vScale;
         public string cachingMs;
+        bool useCurrentDir;
 
         public Form1()
         {
             InitializeComponent();
 
-
+            this.AutoScaleMode = AutoScaleMode.Dpi;
 
             // hide things until we know what the source will be
             aspectSelectLabel.Visible = false;
@@ -68,7 +69,6 @@ namespace Stream_Helper
             cachingMsBox.Visible = false;
             cachingMsLabel.Visible = false;
 
-
             // hide the stream url until stream is started
             streamURLbox.Visible = false;
             streamUrlLabel.Visible = false;
@@ -83,7 +83,6 @@ namespace Stream_Helper
             vVertRes.Enabled = false;
 
             // get ip
-            //string ip = "";
             string strHostName = "";
             strHostName = System.Net.Dns.GetHostName();
             IPHostEntry ipEntry = System.Net.Dns.GetHostEntry(strHostName);
@@ -97,13 +96,15 @@ namespace Stream_Helper
             }
             ipCombo.SelectedIndex = ipCombo.Items.Count - 1;
 
+            string currentDir = System.AppDomain.CurrentDomain.BaseDirectory;
+            
             // find vlc.exe
-            // also need to test dropping this app in vlc folder while other paths are broken
             if (File.Exists(@"vlc.exe"))
             {
-                vlcExePath = "";
+                vlcExePath = currentDir;
                 vlcNotFoundLabel.Visible = false;
                 vlcPathFound = true;
+                useCurrentDir = true;
             }
 
             if (vlcPathFound != true)
@@ -113,6 +114,7 @@ namespace Stream_Helper
                     vlcExePath = (@"C:\Program Files (x86)\VideoLAN\VLC\");
                     vlcNotFoundLabel.Visible = false;
                     vlcPathFound = true;
+                    useCurrentDir = false;
                 }
             }
 
@@ -122,10 +124,9 @@ namespace Stream_Helper
                 {
                     vlcExePath = (@"C:\Program Files\VideoLAN\VLC\");
                     vlcNotFoundLabel.Visible = false;
+                    useCurrentDir = false;
                 }
             }
-
-
 
             if (vlcExePath == null)
             {
@@ -198,7 +199,6 @@ namespace Stream_Helper
         private void btnStream_Click(object sender, EventArgs e)
         {
 
-
             var selectedIP = ips.ElementAt(ipCombo.SelectedIndex).Item2;
 
             if (streamSource == "file")
@@ -209,7 +209,6 @@ namespace Stream_Helper
                     return;
                 }
             }
-
 
             if (selectedIP.ToString() == "127.0.0.1")
             {
@@ -235,30 +234,22 @@ namespace Stream_Helper
                 vScale = ("0." + scaleBox.Value.ToString());
             }
 
-
             if (streamSource == "file")
             {
                 finalFilePath = ("file:///" + (filePath.Replace(@"\", @"/").Replace(@" ", @"%20")));
 
-                //if (streamVhorizResolution == "Auto")
-                //{
-
-                // original working
-                //streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
                 try
                 {
-                    streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep  :file-caching=" + cachingMs + "");
+                    // old command for wp
+                    //streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep  :file-caching=" + cachingMs + "");
+
+                    // new command
+                    streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mp3,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ffmpeg{mux=flv},dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep  :file-caching=" + cachingMs + "");
                 }
                 catch
                 {
                     MessageBox.Show("Error");
                 }
-
-                //}
-                //else
-                //{
-                //streamCommandLine = (finalFilePath + " --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=30,scale=Auto,width=" + streamVhorizResolution + ",height=" + streamVvertResolution + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:http{mux=ts,dst=:" + streamPort + "/} :sout-all :sout-keep");
-                //}
             }
 
             if (streamSource == "desktop")
@@ -274,7 +265,7 @@ namespace Stream_Helper
 
                 try
                 {
-                    streamCommandLine = ("dshow:// --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mpga,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ts,dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep :dshow-vdev=screen-capture-recorder :dshow-adev=virtual-audio-capturer :dshow-aspect-ratio=" + streamAspect + " :dshow-caching=" + cachingMs + "");
+                    streamCommandLine = ("dshow:// --sout=#transcode{vcodec=h264,vb=" + streamVbitrate + ",fps=" + streamVframerate + ",acodec=mp3,ab=" + streamAbitrate + ",channels=2,samplerate=" + streamAsampleRate + "}:std{access=http,mux=ffmpeg{mux=flv},dst=:" + streamPort + "} --no-sout-rtp-sap --no-sout-standard-sap --ttl=5 --sout-transcode-scale=" + vScale + " --sout-keep :dshow-vdev=screen-capture-recorder :dshow-adev=virtual-audio-capturer :dshow-aspect-ratio=" + streamAspect + " :dshow-caching=" + cachingMs + "");
                 }
                 catch
                 {
@@ -284,7 +275,6 @@ namespace Stream_Helper
 
             }
 
-
             // populate the stream url and make it visible
             streamURLbox.Text = ("http://" + selectedIP + ":" + portBox.Text);
             streamURLbox.Visible = true;
@@ -292,24 +282,28 @@ namespace Stream_Helper
 
             // start the stream with vlc
             Process process = new Process();
+            if (useCurrentDir == true)
+            {
+                process.StartInfo.UseShellExecute = false;
+            }
+            else
+            {
+                process.StartInfo.UseShellExecute = true;
+            }
             process.StartInfo.FileName = "vlc.exe";
             process.StartInfo.WorkingDirectory = vlcExePath;
             process.StartInfo.Arguments = streamCommandLine;
             process.Start();
-
         }
 
         // reset form button
         private void btnReset_Click(object sender, EventArgs e)
         {
             streamSource = "";
-
             filePathBox.Text = null;
             portBox.Value = decimal.Parse("8080");
             vBitrateBox.Value = decimal.Parse("3000");
             vFramerateBox.Value = decimal.Parse("30");
-            //vHorizRes.Text = "Auto";
-            //vVertRes.Text = "Auto";
             aBitrateBox.Value = decimal.Parse("128");
             aSampleRateCombo.SelectedItem = "44100";
             filePath = null;
@@ -353,6 +347,7 @@ namespace Stream_Helper
 
             note1Label.Visible = true;
             note1Text.Visible = true;
+            btnLatestVLC.Visible = true;
             dlExeLabel.Visible = true;
             dlZipLabel.Visible = true;
             dlScreenCapRecLabel.Visible = true;
@@ -373,6 +368,7 @@ namespace Stream_Helper
 
             note1Label.Visible = false;
             note1Text.Visible = false;
+            btnLatestVLC.Visible = false;
             dlExeLabel.Visible = false;
             dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
@@ -414,6 +410,7 @@ namespace Stream_Helper
 
             note1Label.Visible = false;
             note1Text.Visible = false;
+            btnLatestVLC.Visible = false;
             dlExeLabel.Visible = false;
             dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
@@ -455,26 +452,26 @@ namespace Stream_Helper
         // dl vlc zip button
         private void dlZipLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://download.videolan.org/pub/videolan/vlc/2.1.5/win32/vlc-2.1.5-win32.zip");
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/11VNJl5UEDJM_jwbi2vCMtLhIbzqQxHEv/view?usp=sharing");
         }
 
         // dl vlc exe label
         private void dlExeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://download.videolan.org/pub/videolan/vlc/2.1.5/win32/vlc-2.1.5-win32.exe");
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1Ds8DP1pY9vOWwiRlOfAcx-sLMisqPYKb/view?usp=sharing");
         }
 
         // dl screen-capture-recorder button
         private void dlScreenCapRecLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://drive.google.com/file/d/0B6k8Z8ibdu9UM25rdGNXcW1hNVE/view?usp=sharing");
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/14ejrsFYBZ6GrFRagYjRhYaeDI1TiR5pW/view?usp=sharing");
 
         }
 
         // documentation link button
         private void documentationLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1SreCBUgOSjKvq-qXtp3ouodjSQ9O2xnK4uNmcg8jjGM/edit?usp=sharing");
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/19L79dHrFhd6zBT22FQNhkZa6Eae0NJWZC0n_zIwKUjw/edit?usp=sharing");
 
         }
 
@@ -483,6 +480,12 @@ namespace Stream_Helper
         {
             System.Diagnostics.Process.Start("https://github.com/blevok/Stream-Helper");
 
+        }
+
+        // latest vlc button
+        private void btnLatestVLC_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.videolan.org/vlc/index.html");
         }
     }
 }

@@ -79,6 +79,7 @@
             this.cachingMsBox = new System.Windows.Forms.NumericUpDown();
             this.cachingMsLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLatestVLC = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vBitrateBox)).BeginInit();
@@ -579,7 +580,7 @@
             this.note1Text.Multiline = true;
             this.note1Text.Name = "note1Text";
             this.note1Text.ReadOnly = true;
-            this.note1Text.Size = new System.Drawing.Size(473, 206);
+            this.note1Text.Size = new System.Drawing.Size(473, 237);
             this.note1Text.TabIndex = 48;
             this.note1Text.Text = resources.GetString("note1Text.Text");
             // 
@@ -589,7 +590,7 @@
             this.dlExeLabel.AutoSize = true;
             this.dlExeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlExeLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlExeLabel.Location = new System.Drawing.Point(323, 329);
+            this.dlExeLabel.Location = new System.Drawing.Point(323, 349);
             this.dlExeLabel.Name = "dlExeLabel";
             this.dlExeLabel.Size = new System.Drawing.Size(46, 20);
             this.dlExeLabel.TabIndex = 49;
@@ -604,7 +605,7 @@
             this.dlZipLabel.AutoSize = true;
             this.dlZipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlZipLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlZipLabel.Location = new System.Drawing.Point(279, 329);
+            this.dlZipLabel.Location = new System.Drawing.Point(279, 349);
             this.dlZipLabel.Name = "dlZipLabel";
             this.dlZipLabel.Size = new System.Drawing.Size(38, 20);
             this.dlZipLabel.TabIndex = 50;
@@ -619,7 +620,7 @@
             this.dlScreenCapRecLabel.AutoSize = true;
             this.dlScreenCapRecLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlScreenCapRecLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlScreenCapRecLabel.Location = new System.Drawing.Point(291, 209);
+            this.dlScreenCapRecLabel.Location = new System.Drawing.Point(291, 229);
             this.dlScreenCapRecLabel.Name = "dlScreenCapRecLabel";
             this.dlScreenCapRecLabel.Size = new System.Drawing.Size(180, 20);
             this.dlScreenCapRecLabel.TabIndex = 51;
@@ -735,7 +736,22 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 59;
-            this.label1.Text = "v1.0.0.2";
+            this.label1.Text = "v1.1.0.0";
+            // 
+            // btnLatestVLC
+            // 
+            this.btnLatestVLC.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.btnLatestVLC.AutoSize = true;
+            this.btnLatestVLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLatestVLC.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.btnLatestVLC.Location = new System.Drawing.Point(328, 189);
+            this.btnLatestVLC.Name = "btnLatestVLC";
+            this.btnLatestVLC.Size = new System.Drawing.Size(94, 20);
+            this.btnLatestVLC.TabIndex = 60;
+            this.btnLatestVLC.TabStop = true;
+            this.btnLatestVLC.Text = "videolan.org";
+            this.btnLatestVLC.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.btnLatestVLC.Click += new System.EventHandler(this.btnLatestVLC_Click);
             // 
             // Form1
             // 
@@ -745,6 +761,10 @@
             this.BackgroundImage = global::Stream_Helper.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 480);
+            this.Controls.Add(this.btnLatestVLC);
+            this.Controls.Add(this.dlScreenCapRecLabel);
+            this.Controls.Add(this.dlExeLabel);
+            this.Controls.Add(this.dlZipLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cachingMsLabel);
             this.Controls.Add(this.cachingMsBox);
@@ -752,9 +772,6 @@
             this.Controls.Add(this.scaleBox);
             this.Controls.Add(this.githubLabel);
             this.Controls.Add(this.documentationLabel);
-            this.Controls.Add(this.dlScreenCapRecLabel);
-            this.Controls.Add(this.dlZipLabel);
-            this.Controls.Add(this.dlExeLabel);
             this.Controls.Add(this.note1Text);
             this.Controls.Add(this.note1Label);
             this.Controls.Add(this.picture43);
@@ -863,6 +880,7 @@
         private System.Windows.Forms.NumericUpDown cachingMsBox;
         private System.Windows.Forms.Label cachingMsLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel btnLatestVLC;
     }
 }
 
