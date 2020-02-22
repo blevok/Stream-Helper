@@ -67,10 +67,7 @@
             this.aspect169Radio = new System.Windows.Forms.RadioButton();
             this.picture169 = new System.Windows.Forms.PictureBox();
             this.picture43 = new System.Windows.Forms.PictureBox();
-            this.note1Label = new System.Windows.Forms.Label();
             this.note1Text = new System.Windows.Forms.TextBox();
-            this.dlExeLabel = new System.Windows.Forms.LinkLabel();
-            this.dlZipLabel = new System.Windows.Forms.LinkLabel();
             this.dlScreenCapRecLabel = new System.Windows.Forms.LinkLabel();
             this.documentationLabel = new System.Windows.Forms.LinkLabel();
             this.githubLabel = new System.Windows.Forms.LinkLabel();
@@ -438,7 +435,7 @@
             // btnSourceFile
             // 
             this.btnSourceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceFile.Location = new System.Drawing.Point(146, 113);
+            this.btnSourceFile.Location = new System.Drawing.Point(146, 153);
             this.btnSourceFile.Name = "btnSourceFile";
             this.btnSourceFile.Size = new System.Drawing.Size(149, 27);
             this.btnSourceFile.TabIndex = 32;
@@ -483,7 +480,7 @@
             // btnSourceDesktop
             // 
             this.btnSourceDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSourceDesktop.Location = new System.Drawing.Point(301, 113);
+            this.btnSourceDesktop.Location = new System.Drawing.Point(301, 153);
             this.btnSourceDesktop.Name = "btnSourceDesktop";
             this.btnSourceDesktop.Size = new System.Drawing.Size(150, 27);
             this.btnSourceDesktop.TabIndex = 35;
@@ -496,7 +493,7 @@
             this.selectSourceLabel.AutoSize = true;
             this.selectSourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectSourceLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.selectSourceLabel.Location = new System.Drawing.Point(167, 80);
+            this.selectSourceLabel.Location = new System.Drawing.Point(167, 120);
             this.selectSourceLabel.Name = "selectSourceLabel";
             this.selectSourceLabel.Size = new System.Drawing.Size(265, 25);
             this.selectSourceLabel.TabIndex = 36;
@@ -557,62 +554,25 @@
             this.picture43.TabIndex = 43;
             this.picture43.TabStop = false;
             // 
-            // note1Label
-            // 
-            this.note1Label.AutoSize = true;
-            this.note1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.note1Label.ForeColor = System.Drawing.Color.Gray;
-            this.note1Label.Location = new System.Drawing.Point(28, 168);
-            this.note1Label.Name = "note1Label";
-            this.note1Label.Size = new System.Drawing.Size(55, 20);
-            this.note1Label.TabIndex = 44;
-            this.note1Label.Text = "Notes:";
-            // 
             // note1Text
             // 
+            this.note1Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.note1Text.BackColor = System.Drawing.Color.Black;
             this.note1Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.note1Text.Enabled = false;
             this.note1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.note1Text.ForeColor = System.Drawing.Color.White;
             this.note1Text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.note1Text.Location = new System.Drawing.Point(88, 169);
+            this.note1Text.Location = new System.Drawing.Point(95, 217);
             this.note1Text.Multiline = true;
             this.note1Text.Name = "note1Text";
             this.note1Text.ReadOnly = true;
-            this.note1Text.Size = new System.Drawing.Size(473, 237);
+            this.note1Text.Size = new System.Drawing.Size(425, 103);
             this.note1Text.TabIndex = 48;
-            this.note1Text.Text = resources.GetString("note1Text.Text");
-            // 
-            // dlExeLabel
-            // 
-            this.dlExeLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlExeLabel.AutoSize = true;
-            this.dlExeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dlExeLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlExeLabel.Location = new System.Drawing.Point(323, 349);
-            this.dlExeLabel.Name = "dlExeLabel";
-            this.dlExeLabel.Size = new System.Drawing.Size(46, 20);
-            this.dlExeLabel.TabIndex = 49;
-            this.dlExeLabel.TabStop = true;
-            this.dlExeLabel.Text = ".EXE";
-            this.dlExeLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlExeLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dlExeLabel_LinkClicked);
-            // 
-            // dlZipLabel
-            // 
-            this.dlZipLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlZipLabel.AutoSize = true;
-            this.dlZipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dlZipLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlZipLabel.Location = new System.Drawing.Point(279, 349);
-            this.dlZipLabel.Name = "dlZipLabel";
-            this.dlZipLabel.Size = new System.Drawing.Size(38, 20);
-            this.dlZipLabel.TabIndex = 50;
-            this.dlZipLabel.TabStop = true;
-            this.dlZipLabel.Text = ".ZIP";
-            this.dlZipLabel.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlZipLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dlZipLabel_LinkClicked);
+            this.note1Text.Text = "Stream Helper uses VLC Media Player to create streams.\r\nDownload the latest versi" +
+    "on here:\r\n\r\nDesktop streaming requires:\r\n\r\n";
             // 
             // dlScreenCapRecLabel
             // 
@@ -620,7 +580,7 @@
             this.dlScreenCapRecLabel.AutoSize = true;
             this.dlScreenCapRecLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlScreenCapRecLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.dlScreenCapRecLabel.Location = new System.Drawing.Point(291, 229);
+            this.dlScreenCapRecLabel.Location = new System.Drawing.Point(299, 277);
             this.dlScreenCapRecLabel.Name = "dlScreenCapRecLabel";
             this.dlScreenCapRecLabel.Size = new System.Drawing.Size(180, 20);
             this.dlScreenCapRecLabel.TabIndex = 51;
@@ -736,7 +696,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 59;
-            this.label1.Text = "v1.1.0.0";
+            this.label1.Text = "v1.2.0.0";
             // 
             // btnLatestVLC
             // 
@@ -744,7 +704,7 @@
             this.btnLatestVLC.AutoSize = true;
             this.btnLatestVLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLatestVLC.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.btnLatestVLC.Location = new System.Drawing.Point(328, 189);
+            this.btnLatestVLC.Location = new System.Drawing.Point(335, 237);
             this.btnLatestVLC.Name = "btnLatestVLC";
             this.btnLatestVLC.Size = new System.Drawing.Size(94, 20);
             this.btnLatestVLC.TabIndex = 60;
@@ -763,8 +723,6 @@
             this.ClientSize = new System.Drawing.Size(600, 480);
             this.Controls.Add(this.btnLatestVLC);
             this.Controls.Add(this.dlScreenCapRecLabel);
-            this.Controls.Add(this.dlExeLabel);
-            this.Controls.Add(this.dlZipLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cachingMsLabel);
             this.Controls.Add(this.cachingMsBox);
@@ -773,7 +731,6 @@
             this.Controls.Add(this.githubLabel);
             this.Controls.Add(this.documentationLabel);
             this.Controls.Add(this.note1Text);
-            this.Controls.Add(this.note1Label);
             this.Controls.Add(this.picture43);
             this.Controls.Add(this.picture169);
             this.Controls.Add(this.aspect169Radio);
@@ -868,10 +825,7 @@
         private System.Windows.Forms.RadioButton aspect169Radio;
         private System.Windows.Forms.PictureBox picture169;
         private System.Windows.Forms.PictureBox picture43;
-        private System.Windows.Forms.Label note1Label;
         private System.Windows.Forms.TextBox note1Text;
-        private System.Windows.Forms.LinkLabel dlExeLabel;
-        private System.Windows.Forms.LinkLabel dlZipLabel;
         private System.Windows.Forms.LinkLabel dlScreenCapRecLabel;
         private System.Windows.Forms.LinkLabel documentationLabel;
         private System.Windows.Forms.LinkLabel githubLabel;

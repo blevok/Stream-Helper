@@ -120,16 +120,6 @@
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="note1Text.Text" xml:space="preserve">
-    <value>Stream Helper uses VLC Media Player to create streams.
-Download the latest version here:
-
-Desktop streaming requires:
-
-Desktop streaming may not work properly with some versions of VLC. If you get an error message when trying to stream your desktop, or the picture appears upside down, try VLC version 2.1.5
-
-Download VLC 2.1.5 here:</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

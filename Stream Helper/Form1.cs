@@ -345,11 +345,8 @@ namespace Stream_Helper
             btnStream.Visible = false;
             btnReset.Visible = false;
 
-            note1Label.Visible = true;
             note1Text.Visible = true;
             btnLatestVLC.Visible = true;
-            dlExeLabel.Visible = true;
-            dlZipLabel.Visible = true;
             dlScreenCapRecLabel.Visible = true;
             documentationLabel.Visible = true;
             githubLabel.Visible = true;
@@ -366,11 +363,8 @@ namespace Stream_Helper
         {
             streamSource = "file";
 
-            note1Label.Visible = false;
             note1Text.Visible = false;
             btnLatestVLC.Visible = false;
-            dlExeLabel.Visible = false;
-            dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
             documentationLabel.Visible = false;
             githubLabel.Visible = false;
@@ -408,11 +402,8 @@ namespace Stream_Helper
         {
             streamSource = "desktop";
 
-            note1Label.Visible = false;
             note1Text.Visible = false;
             btnLatestVLC.Visible = false;
-            dlExeLabel.Visible = false;
-            dlZipLabel.Visible = false;
             dlScreenCapRecLabel.Visible = false;
             documentationLabel.Visible = false;
             githubLabel.Visible = false;
@@ -447,18 +438,6 @@ namespace Stream_Helper
             scaleBox.Visible = true;
             cachingMsBox.Visible = true;
             cachingMsLabel.Visible = true;
-        }
-
-        // dl vlc zip button
-        private void dlZipLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://drive.google.com/file/d/11VNJl5UEDJM_jwbi2vCMtLhIbzqQxHEv/view?usp=sharing");
-        }
-
-        // dl vlc exe label
-        private void dlExeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1Ds8DP1pY9vOWwiRlOfAcx-sLMisqPYKb/view?usp=sharing");
         }
 
         // dl screen-capture-recorder button
